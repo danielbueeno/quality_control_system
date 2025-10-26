@@ -1,4 +1,4 @@
-# Sistema de Qualidade e Embalagem de Peças (persistente)
+# Gestão de Peças, Qualidade e Armazenamento
 
 Aplicação de terminal para **avaliar peças**, **armazená-las em caixas** (até 10 por caixa) e **persistir tudo em ficheiros**.  
 Ao iniciar, o sistema **reconstrói o estado** a partir dos ficheiros; ao operar, **salva** as alterações (caixas, reprovadas e relatórios).
@@ -7,14 +7,14 @@ Ao iniciar, o sistema **reconstrói o estado** a partir dos ficheiros; ao operar
 
 ## 📁 Estrutura do projeto
 
-├─ settings.py # Configurações (faixas de qualidade, paths, capacidade da caixa)
-├─ models.py # Entidades de domínio: Item e Box
-├─ persistence.py # Funções de IO em disco (caixas, reprovadas, relatórios/dirs)
-├─ quality_control_system.py# Programa principal (CLI)
-└─ data/ # Criado automaticamente
-├─ boxes/ # Caixas salvas como JSON (box_0001.json, etc.)
-├─ reports/ # Relatórios gerados (.txt)
-└─ reprovadas.json # Lista de peças reprovadas
+- settings.py — Configurações (faixas de qualidade, paths, capacidade da caixa)
+- models.py — Entidades de domínio: Item e Box
+- quality_control_system.py — Programa principal (CLI)
+
+- data/ — Criado automaticamente
+  - boxes/ — Caixas salvas como JSON (box_0001.json, etc.)
+  - reports/ — Relatórios gerados (.txt)
+  - reprovadas.json — Lista de peças reprovadas
 
 ---
 
@@ -49,26 +49,15 @@ Ao iniciar, o sistema **reconstrói o estado** a partir dos ficheiros; ao operar
 
 > Requisitos: **Python 3** Não há dependências externas.
 
-# macOS / Linux
-
-python3 quality_control_system.py
-
-# Windows
-
-python quality_control_system.py
+ ``python3 quality_control_system.py``
 
 ### Use o menu interativo no terminal:
 
-================================
-SISTEMA DE QUALIDADE E EMBALAGEM DE PEÇAS
-================================
+<img width="351" height="304" alt="Screenshot 2025-10-26 at 15 49 48" src="https://github.com/user-attachments/assets/88414e0f-33cf-4e88-8c75-a62598110b97" />
 
-1. Cadastrar nova peça
-2. Listar peças aprovadas/reprovadas
-3. Remover peça cadastrada
-4. Listar caixas fechadas
-5. Gerar relatório final
-6. Sair
+### Acesse os dados quando quiser na caixa criada
 
-## ⌨️ Exemplos de entradas e saídas
-# quality_control_system
+<img width="369" height="317" alt="Screenshot 2025-10-26 at 15 52 22" src="https://github.com/user-attachments/assets/231deb91-6f2a-48ea-a046-2a2b3529820b" />
+
+
+
